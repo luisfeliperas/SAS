@@ -26,13 +26,11 @@ proc princomp data=multi out=prin plots=all;
 var MPa Ds Umi;
 id prof;
 run;
-proc print data=prin; /* sair os autovalores
-/*
+proc print data=prin;
 proc princomp data=multi cov out=prin plots=all;
 var MPa Ds Umi;
 id prof;
 run;
-*/
 proc cluster method=ward data=multi outtree=tree;
 var MPa Ds Umi;
 id prof;
